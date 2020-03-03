@@ -1,0 +1,85 @@
+:root {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --text-primary: #ececec;
+    --text-secondary: #b6b6b6;
+    --bg-primary: #23232a;
+    --bg-sencondary: #141418;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+    background: #e1e1;
+}
+
+main {
+    margin: 0 3rem 0 5rem;
+    padding: 1rem;
+    text-align: justify;
+}
+small {
+    position: relative;
+    left: 90%;
+    bottom: 20px;
+}
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-item {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+.nav-link {
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    filter: grayscale(100%) opacity(0.6);
+    transition: 660ms;
+}
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+.nav-link svg {
+    /* width: 2rem; */
+    min-width: 2rem;
+    margin: 0 1rem;
+}
+.navbar:hover {
+    width: 13rem;
+}
+.navbar:hover .link-text {
+    display: block;
+} 
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+} 
